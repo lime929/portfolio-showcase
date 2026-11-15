@@ -1,0 +1,121 @@
+[
+  {
+    "slug": "white-rabbit-co",
+    "title": "White Rabbit Co.",
+    "category": "Frontend Development",
+    "origin": "Course project — Portfolio piece",
+    "tagline": "A gothic-inspired fashion ecommerce website combining a responsive product catalog with a creative alternative-fashion identity.",
+    "projectType": "Fashion storefront",
+    "focus": "Responsive UI & product browsing",
+    "status": "Frontend prototype",
+    "technologies": [
+      "Next.js",
+      "React",
+      "Tailwind CSS",
+      "JSON",
+      "Next.js Image",
+      "React Icons",
+      "Lucide React"
+    ],
+    "overview": {
+      "title": "An alternative identity. A familiar shopping experience.",
+      "paragraphs": [
+        "White Rabbit Co. started as a project for a 300-level IT course and is now being developed into a portfolio piece. It presents an alternative-fashion brand through a multi-page website, bringing together clothing, accessories, brand information, and blog content.",
+        "The visual design pairs dark backgrounds and muted pink accents with large product photography, rounded cards, and subtle hover effects. The same design language carries through the navigation, catalog, and individual product pages.",
+        "The main focus is the frontend browsing experience: using layout, reusable components, structured content, and routing to create a cohesive storefront and positive user experience."
+      ]
+    },
+    "goal": {
+      "title": "More than a grid of products.",
+      "paragraphs": [
+        "The project utilizes the structure of an online clothing store together with the visual presentation of a modern and alternative-fashion brand that appeals to gen-z.",
+        "Visitors can browse product cards and open individual pages for more detailed information. Sections dedicated to the brand’s styles, story, and blog give the site an identity beyond its merchandise."
+      ],
+      "main": "The goal is a storefront that feels engaging and stylized without making the browsing experience complicated."
+    },
+    "features": [
+      {
+        "title": "Responsive Product Catalog",
+        "description": "A flexible clothing grid adapts from a single column on smaller screens to multi-column layouts on larger displays."
+      },
+      {
+        "title": "Dynamic Product Pages",
+        "description": "Each product opens its own detail page, populated with the matching item’s information through an ID-based route."
+      },
+      {
+        "title": "Detailed Product Information",
+        "description": "Product pages bring together photography, pricing, ratings, descriptions, fabric information, available sizes, and color swatches."
+      },
+      {
+        "title": "Mobile Navigation",
+        "description": "A collapsible menu keeps the main sections accessible on smaller screens and closes when a visitor selects a link."
+      },
+      {
+        "title": "Reusable Components",
+        "description": "Shared product cards and navigation components help keep the interface consistent and make updates easier to maintain."
+      },
+      {
+        "title": "Subtle Interface Effects",
+        "description": "Image zooms, card movement, and hover transitions provide visual feedback while staying consistent with the brand’s aesthetic."
+      }
+    ],
+    "development": {
+      "title": "Structured data. Reusable presentation.",
+      "paragraphs": [
+        "The catalog is driven by a local JSON file containing each product’s ID, name, price, images, description, sizes, and colors.",
+        "The catalog page maps over that data to generate product cards. Each card links to a dynamic product route, where the matching item is retrieved using its ID.",
+        "React state controls the mobile menu, while the current pathname determines the active navigation link."
+      ],
+      "flowTitle": "Product data flow",
+      "steps": [
+        {
+          "title": "clothing.json",
+          "description": "Stores product content and attributes."
+        },
+        {
+          "title": "Catalog page",
+          "description": "Maps the data into reusable product cards."
+        },
+        {
+          "title": "Product card",
+          "description": "Links each item to its individual detail route."
+        },
+        {
+          "title": "/clothing/[id]",
+          "description": "Finds the matching product and renders its details."
+        }
+      ]
+    },
+    "challenges": [
+      {
+        "title": "Balancing atmosphere with readability",
+        "description": "The design pairs dark surfaces with contrasting text, clear spacing, and defined content sections so the gothic aesthetic supports rather than overwhelms the browsing experience."
+      },
+      {
+        "title": "Adapting layouts across screen sizes",
+        "description": "Responsive grids, flexible product layouts, and a collapsible navigation menu allow the same content to work within different screen widths."
+      },
+      {
+        "title": "Keeping product photography consistent",
+        "description": "Shared image proportions create a consistent catalog, while item-specific image positioning helps preserve the focal point of individual photographs."
+      }
+    ],
+    "future": {
+      "title": "A foundation to build on.",
+      "paragraphs": [
+        "White Rabbit Co. is currently a frontend storefront prototype, not a transaction-ready store. Product browsing and detail-page navigation are implemented, while search, filters, and Add to Cart remain interface placeholders.",
+        "The next stage is to connect those controls to real interactions while preserving the project’s visual identity."
+      ]
+    },
+    "nextSteps": [
+      "Connect the search field to product-name and keyword matching.",
+      "Implement catalog filters for product categories and attributes.",
+      "Track selected sizes and colors on product pages.",
+      "Build a working cart with quantity controls and item removal."
+    ],
+    "links": {
+      "live": "https://white-rabbit-co.vercel.app/",
+      "github": "https://github.com/lime929/white-rabbit-co"
+    }
+  }
+]
