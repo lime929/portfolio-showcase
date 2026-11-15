@@ -11,5 +11,9 @@ export const metadata = {
 };
 
 export default function ProjectOnePage() {
-  return <ProjectTemplate project={project} />;
+  const project = projects.find(
+    (item) => item.slug === "white-rabbit-co"
+  );
+  return <ProjectTemplate project={project}
+   />;
 }
