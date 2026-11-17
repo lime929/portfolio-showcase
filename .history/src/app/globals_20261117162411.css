@@ -1,0 +1,39 @@
+/* google fonts is loaded into the layout instead of css file */
+
+@import "tailwindcss";
+
+@theme {
+  /* fonts */
+  --font-one: "Ultra", serif;
+  --font-two: "Cedarville Cursive", cursive;
+
+  /* --font-three: "Anybody", sans-serif; */
+  /* --font-three--font-variation-settings: "wdth" 100; */
+  --font-four: "Syne", sans-serif;
+  --font-five: "Stint Ultra Condensed", sans-serif;
+
+  /* colors */
+  --color-cream: #F2EAE0;
+  --color-dark-grey: #2D2638;
+  --color-light-purple: #BDA6CE;
+  --color-dark-purple: #9B8EC7;
+  --color-light-blue: #B4D3D9;
+  --color-darkest-purple: #493060;
+
+  --breakpoint-xs: 500px;
+}
+
+:root {
+    --foreground: var(--color-dark-grey);
+}
+
+body {
+  background: var(--color-cream);
+  color: var(--color-dark-grey);
+  font-family: var(--font-four);
+}
+
+.project-page {
+  width: 85%;
+  
+}

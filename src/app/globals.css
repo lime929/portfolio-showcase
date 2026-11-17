@@ -15,6 +15,7 @@
   /* colors */
   --color-cream: #F2EAE0;
   --color-dark-grey: #2D2638;
+  --color-darker-grey: #211B2A;
   --color-light-purple: #BDA6CE;
   --color-dark-purple: #9B8EC7;
   --color-light-blue: #B4D3D9;
@@ -32,3 +33,8 @@ body {
   color: var(--color-dark-grey);
   font-family: var(--font-four);
 }
+
+/* .project-page {
+  transform: scale(0.9);
+  transform-origin: top center;
+} */

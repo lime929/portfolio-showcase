@@ -87,22 +87,21 @@ export default function ProjectTemplate({ project }) {
     "--project-accent-text": theme?.accentText,
     "--project-on-accent": theme?.onAccent,
   }}
-  className="min-h-screen bg-[#101010] text-zinc-200 selection:bg-[var(--project-accent)] selection:text-[var(--project-on-accent)]"
+  className="min-h-screen bg-dark-grey text-zinc-200 selection:bg-[var(--project-accent)] selection:text-[var(--project-on-accent)]"
+  // add white space / smaller div size?
+  //  scale-90 origin-top transition-transform duration-300 ease-in-out
 >
 
       {/* Hero */}
       <header className="relative isolate overflow-hidden border-b border-white/10">
+      {/* decorative light effect */}
         <div
           aria-hidden="true"
-          className="pointer-events-none absolute -right-32 -top-32 h-[480px] w-[480px] rounded-full bg-[var(--project-accent)]/15 blur-3xl"
+          className="pointer-events-none absolute -right-32 -top-32 h-[480px] w-[480px] rounded-full bg-[var(--project-accent)]/35 blur-2xl"
         />
 
-        <div
-          aria-hidden="true"
-          className="pointer-events-none absolute -bottom-40 -left-32 h-[400px] w-[400px] rounded-full bg-[var(--project-accent)]/10 blur-3xl"
-        />
 
-        <div className="relative mx-auto max-w-6xl px-6 py-20 sm:px-8 sm:py-28 lg:py-32">
+        <div className="relative mx-auto max-w-[84rem] px-6 py-20 sm:px-8 sm:py-28 lg:py-32">
           <div className="mb-12">
             <BackButton />
           </div>
@@ -138,7 +137,7 @@ export default function ProjectTemplate({ project }) {
               width={1200}
               height={600}
               priority
-              className="h-auto w-full max-w-6xl"            
+              className="h-auto w-full max-w-[84rem]"
               />
       )}
 
@@ -236,7 +235,7 @@ export default function ProjectTemplate({ project }) {
         </div>
       </header>
 
-      <div className="mx-auto max-w-6xl px-6 sm:px-8">
+      <div className="mx-auto max-w-[84rem] px-6 sm:px-8">
         {/* Overview and technologies */}
         {(hasOverview || technologies.length > 0) && (
           <section
@@ -457,6 +456,7 @@ export default function ProjectTemplate({ project }) {
                   </div>
                 )}
 
+
                 {nextSteps.length > 0 && (
                   <div>
                     <h3 className="mb-5 text-sm font-medium text-zinc-200">
@@ -488,7 +488,7 @@ export default function ProjectTemplate({ project }) {
 
       {/* Footer */}
       <footer className="border-t border-white/10 px-6 py-8 sm:px-8">
-        <div className="mx-auto flex max-w-6xl flex-col gap-2 text-sm text-zinc-500 sm:flex-row sm:items-center sm:justify-between">
+        <div className="mx-auto flex max-w-[84rem] flex-col gap-2 text-sm text-zinc-500 sm:flex-row sm:items-center sm:justify-between">
           <p className="text-zinc-300">{title}</p>
 
           {technologies.length > 0 && (
