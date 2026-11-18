@@ -9,7 +9,7 @@ const SIMPLE = "https://cdn.simpleicons.org";
 const skills = [
   { name: "REACT.JS", category: "Frontend Web", icon: `${DEVICON}/react/react-original.svg` },
   { name: "JAVASCRIPT", category: "Frontend Web", icon: `${DEVICON}/javascript/javascript-original.svg` },
-  { name: "NODE.JS", category: "Frontend Web", icon: `${SIMPLE}/adobexd/FF61F6` },
+  { name: "NODE.JS", category: "Frontend Web", icon: `${SIMPLE}/` },
   { name: "HTML5", category: "Frontend Web", icon: `${DEVICON}/html5/html5-original.svg` },
   { name: "CSS3", category: "Frontend Web", icon: `${DEVICON}/css3/css3-original.svg` },
   { name: "TAILWIND", category: "Frontend Web", icon: `${DEVICON_LATEST}/tailwindcss/tailwindcss-original.svg` },
@@ -30,21 +30,21 @@ function SkillCard({ name, category, icon, index }) {
   const delay = ((index % 4) + 1) * 100;
 
   // Adds "reveal-visible" the first time the card scrolls into view
-  useEffect(() => {
-    const el = ref.current;
-    if (!el) return;
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          el.classList.add("reveal-visible");
-          observer.disconnect();
-        }
-      },
-      { threshold: 0.1 }
-    );
-    observer.observe(el);
-    return () => observer.disconnect();
-  }, []);
+  // useEffect(() => {
+  //   const el = ref.current;
+  //   if (!el) return;
+  //   const observer = new IntersectionObserver(
+  //     ([entry]) => {
+  //       if (entry.isIntersecting) {
+  //         el.classList.add("reveal-visible");
+  //         observer.disconnect();
+  //       }
+  //     },
+  //     { threshold: 0.1 }
+  //   );
+  //   observer.observe(el);
+  //   return () => observer.disconnect();
+  // }, []);
 
   return (
     <div
