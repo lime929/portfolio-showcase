@@ -1,0 +1,641 @@
+[
+  {
+    "theme": {
+    "accent": "#ba8898",
+    "accentHover": "#ddb0bf",
+    "accentText": "#e0bac7",
+    "onAccent": "#171014"},
+    "image": "/images/projects/white-rabbit-co.png",
+    "alt": "White Rabbit Co. product page",
+    "slug": "white-rabbit-co",
+    "title": "White Rabbit Co.",
+    "category": "Frontend Development",
+    "origin": "Course project ⟶ Portfolio piece",
+    "tagline": "A gothic-inspired fashion ecommerce website combining a responsive product catalog with a creative alternative fashion identity.",
+    "projectType": "Clothing storefront",
+    "focus": "Responsive UI & product browsing",
+    "status": "Frontend prototype",
+    "technologies": [
+      "Next.js",
+      "React",
+      "Tailwind CSS",
+      "JSON",
+      "Next.js",
+      "React Icons",
+      "Lucide React"
+    ],
+    "overview": {
+      "title": "An alternative identity. A familiar shopping experience.",
+      "paragraphs": [
+        "White Rabbit Co. started as a project for a 300-level IT course and is now being developed into a portfolio piece. It presents an alternative fashion brand through a multi-page website, bringing together clothing, accessories, brand information, and blog content.",
+        "The visual design pairs dark backgrounds and muted pink accents with large product photography, rounded cards, and subtle hover effects. The same design language carries through the navigation, catalog, and individual product pages.",
+        "The main focus is the frontend browsing experience: using layout, reusable components, structured content, and routing to create a cohesive storefront and positive user experience."
+      ]
+    },
+    "goal": {
+      "title": "More than a grid of products.",
+      "paragraphs": [
+        "The project utilizes the structure of an online clothing store together with the visual presentation of a modern and alternative fashion brand that caters towards a gen-z audience.",
+        "Visitors can browse product cards and open individual pages for more detailed information. Sections dedicated to the brand’s styles, story, and blog give the site an identity beyond its merchandise. This project's brand personality and unique design is something that young people are paying attention to and valuing more due to the rise in mindless consumerism."
+      ],
+      "main": "The goal is a storefront that feels engaging and stylized without making the browsing experience complicated."
+    },
+    "features": [
+      {
+        "title": "Responsive Product Catalog",
+        "description": "A flexible grid showcasing clothing items that adapts from a single column on smaller screens to multi-column layouts on larger displays."
+      },
+      {
+        "title": "Dynamic Product Pages",
+        "description": "Each product opens its own detail page, populated with the matching item’s information through an ID-based route."
+      },
+      {
+        "title": "Detailed Product Information",
+        "description": "Product pages showcase each items' photography, pricing, ratings, descriptions, fabric information, available sizes, and color swatches."
+      },
+      {
+        "title": "Mobile Navigation",
+        "description": "A collapsible menu keeps the main sections accessible on smaller screens and closes when a visitor selects a link."
+      },
+      {
+        "title": "Reusable Components",
+        "description": "Shared product cards and navigation components help keep the interface consistent and make updates easier to maintain."
+      },
+      {
+        "title": "Subtle Interface Effects",
+        "description": "Image zooms, card movement, and hover transitions provide visual feedback while staying consistent with the brand’s aesthetic. These effects allow for a more interactive experience without distracting from the content."
+      }
+    ],
+    "development": {
+      "title": "Structured data. Reusable presentation.",
+      "paragraphs": [
+        "The catalog is driven by a local JSON file containing each product’s ID, name, price, images, description, sizes, and colors.",
+        "The catalog page maps over that data to generate product cards. Each card links to a dynamic product route, where the matching item is retrieved using its ID.",
+        "React state controls the mobile menu, while the current pathname determines the active navigation link."
+      ],
+      "flowTitle": "Product data flow",
+      "steps": [
+        {
+          "title": "clothing.json",
+          "description": "Stores all product content and attributes."
+        },
+        {
+          "title": "Catalog page",
+          "description": "Maps the clothing data onto the reusable product card component."
+        },
+        {
+          "title": "Product card",
+          "description": "Links each item to its individual detail route."
+        },
+        {
+          "title": "/clothing/[id]",
+          "description": "Finds the matching product and renders its details onto its own page."
+        }
+      ]
+    },
+    "challenges": [
+      {
+        "title": "Balancing aesthetic with readability",
+        "description": "The design pairs dark backgrounds with contrasting text, clear spacing, and defined content sections so the gothic aesthetic supports rather than overwhelms the browsing experience."
+      },
+      {
+        "title": "Adapting layouts across screen sizes",
+        "description": "Responsive grids, flexible product layouts, and a collapsible navigation menu allow the website's content to work within all screen widths."
+      },
+      {
+        "title": "Keeping product photography consistent",
+        "description": "Shared image proportions create a consistent catalog, while item-specific image positioning helps preserve the focal point of individual photographs."
+      }
+    ],
+    "future": {
+      "title": "A foundation to build on.",
+      "paragraphs": [
+        "White Rabbit Co. is currently a frontend storefront prototype, not a fully functional store. Product browsing and detail-page navigation are implemented, while search, filters, and Add to Cart remain as interface placeholders.",
+        "The next stage in deveopment is to connect those controls to real interactions while preserving the project’s visual identity."
+      ]
+    },
+    "nextSteps": [
+      "Connect the search field to product-name and keyword matching.",
+      "Implement catalog filters for product categories and attributes.",
+      "Track selected sizes and colors on product pages.",
+      "Build a working cart with quantity controls and item removal.",
+      "Add a checkout page with shipping and payment options."
+    ],
+    "links": {
+      "live": "https://white-rabbit-co.vercel.app",
+      "github": "https://github.com/lime929/white-rabbit-co"
+    }
+  },
+  {
+  "theme": {
+    "accent": "#B8CFCE",
+    "accentHover": "#D2E0DF",
+    "accentText": "#B8CFCE",
+    "onAccent": "#333446"
+  },
+  "image": "/images/projects/localSounds.png",
+  "alt": "Local Sounds Home Page",
+  "slug": "local-sounds",
+  "title": "Local Sounds",
+  "category": "Frontend Development",
+  "origin": "Course project ⟶ Portfolio piece",
+  "tagline": "A Chicago music discovery website highlighting local artists, live events, and music shops across the city.",
+  "projectType": "Local music discovery platform",
+  "focus": "Responsive UI & local music discovery",
+  "status": "Frontend prototype",
+  "technologies": [
+    "React",
+    "Vite",
+    "JavaScript",
+    "React Router",
+    "CSS",
+    "HTML"
+  ],
+  "overview": {
+    "title": "A guide to the sounds and scenes of Chicago.",
+    "paragraphs": [
+      "Local Sounds is a multi-page website centered on Chicago's independent music community. It brings artist profiles, event listings, and neighborhood music shops together to help visitors explore the city's music scene.",
+      "The interface uses a slate and teal color palette, concert and music imagery, and shared navigation across the Home, Artists, Events, About, and Music Shops pages.",
+      "The project focuses on a clear, responsive browsing experience built with React components and client-side routes. Its listings are stored locally in JavaScript data because smaller data sets do not require being served by a backend."
+    ]
+  },
+  "goal": {
+    "title": "Make local music easier to discover.",
+    "paragraphs": [
+      "The site organizes local music information into dedicated sections so visitors can browse artists, find featured events, and discover independently owned music shops.",
+      "By bringing these parts of the scene into one place, Local Sounds presents a welcoming starting point for connecting with Chicago's music culture."
+    ],
+    "main": "The goal is a user friendly, easy-to-navigate guide to local music in Chicago, with a consistent experience across all screen sizes."
+  },
+  "features": [
+    {
+      "title": "Artist Directory",
+      "description": "Artist profiles present performer names, genres, imagery, and biographies in a reusable card layout."
+    },
+    {
+      "title": "Event Listings",
+      "description": "Event cards display featured Chicago music events with dates, locations, images, and descriptions."
+    },
+    {
+      "title": "Music Shop Directory",
+      "description": "A dedicated page introduces local record shops and music stores through image-led cards and short descriptions."
+    },
+    {
+      "title": "Multi-page Navigation",
+      "description": "React Router connects the Home, Artists, Events, About, and Music Shops pages, with active-link styling for the current route."
+    },
+    {
+      "title": "Mobile Navigation",
+      "description": "A collapsible menu and overlay make the main sections available on smaller screens and allow visitors to close the menu after choosing a link."
+    },
+    {
+      "title": "Reusable, Data-driven Cards",
+      "description": "Shared React components render artist, event, and shop information from local data, keeping repeated listing layouts consistent."
+    }
+  ],
+  "development": {
+    "title": "Local data. Reusable React components.",
+    "paragraphs": [
+      "Artist, event, and music shop content is defined in src/data.js, alongside imports for the images used by those listings.",
+      "Page components import the relevant collections and map over them to render reusable cards. React Router connects the pages, while React state controls whether the mobile navigation menu is open.",
+      "Vite provides the development server and production build. Styling is written in CSS, and the project does not currently use a backend or external content service."
+    ],
+    "flowTitle": "Listing data flow",
+    "steps": [
+      {
+        "title": "src/data.js",
+        "description": "Exports local artist, event, and music shop data and imports their images."
+      },
+      {
+        "title": "Page components",
+        "description": "Import the relevant data collection and map its entries into the page layout."
+      },
+      {
+        "title": "Reusable cards",
+        "description": "Display each artist, event, or shop's content in a consistent format."
+      },
+      {
+        "title": "React Router",
+        "description": "Makes each section available at its own client-side route."
+      }
+    ]
+  },
+  "challenges": [
+    {
+      "title": "Organizing different kinds of local content",
+      "description": "Artists, events, and shops each need different information, so their local data and card components are tailored to their content while sharing a consistent visual style."
+    },
+    {
+      "title": "Keeping the experience cohesive across pages",
+      "description": "Shared navigation, typography, colors, and card patterns connect sections with different purposes into one site."
+    },
+    {
+      "title": "Supporting smaller screens",
+      "description": "Flexible page layouts and a collapsible navigation menu help visitors access the site's sections at narrower screen widths."
+    }
+  ],
+  "future": {
+    "title": "A starting point for a more connected music guide.",
+    "paragraphs": [
+      "Local Sounds is currently a frontend prototype. Its artist, event, and shop content is local sample data, and the newsletter form is a visual interface without subscription handling.",
+      "The next stage could be to connect the listings and visitor-facing controls to real content such as other websites where users can listen to music, buy tickets or get directions to locations, while preserving the existing browsing experience."
+    ]
+  },
+  "nextSteps": [
+    "Connect artist, event, and shop listings to a maintained content source.",
+    "Add working search and filters for artists and events.",
+    "Connect the newsletter form to a subscription service with appropriate validation and feedback.",
+    "Add ways for visitors to view and save event details.",
+    "Create a deployed live site and keep its project URL up to date."
+  ],
+  "links": {
+    "live": "https://local-sounds.vercel.app/",
+    "github": "https://github.com/lime929/LocalSounds"
+  }
+},
+{
+  "theme": {
+    "accent": "#A1B879",
+    "accentHover": "#B7CC8C",
+    "accentText": "#D4E3B7",
+    "onAccent": "#2D3324"
+  },
+  "image": "/images/projects/spellbound-books.png",
+  "alt": "Spellbound Books Community Page",
+  "slug": "spellbound-books",
+  "title": "Spellbound Books",
+  "category": "Full-Stack Web Development",
+  "origin": "Course project ⟶ Portfolio piece",
+  "tagline": "A family owned bookstore website featuring a categorized book catalog, author spotlights, reader reviews, and a contact form.",
+  "projectType": "Bookstore and reader-community website",
+  "focus": "Server-rendered browsing and responsive UI",
+  "status": "Full-stack course-project prototype",
+  "technologies": [
+    "Node.js",
+    "Express",
+    "EJS",
+    "MongoDB",
+    "Mongoose",
+    "JavaScript",
+    "HTML",
+    "CSS"
+  ],
+  "overview": {
+    "title": "A neighborhood bookstore experience online.",
+    "paragraphs": [
+      "Spellbound Books is a final project presenting a welcoming, independent bookstore based in Chicago's Lincoln Park neighborhood. Its pages introduce the bookstore and offer visitors ways to browse books, learn about authors, and connect with other readers.",
+      "The site includes a categorized catalog with book descriptions, formats, prices, and ratings, alongside featured titles, author spotlights, and a community page with reader reviews.",
+      "The project uses Express routes and controllers to render EJS templates. Book and review content is currently defined in the application, while submitted contact inquiries are stored through MongoDB and Mongoose."
+    ]
+  },
+  "goal": {
+    "title": "A bookstore site built around discovery and community.",
+    "paragraphs": [
+      "The project brings together the core sections of a small bookstore website: a browsable selection of books, information about authors, reader reviews, and a way to contact the shop.",
+      "Its presentation emphasizes an approachable reading experience, with clear categories, book imagery, and responsive layouts. The site is a browsing prototype rather than a complete ecommerce system."
+    ],
+    "main": "The goal is to make discovering books and learning about the bookstore straightforward while giving the project a foundation for future store and community features."
+  },
+  "features": [
+    {
+      "title": "Categorized Book Catalog",
+      "description": "Visitors can browse featured titles and navigate catalog sections for fiction, non-fiction, mystery, and poetry."
+    },
+    {
+      "title": "Book Details at a Glance",
+      "description": "Catalog cards present each book's cover, title, author, format, price, and reader rating."
+    },
+    {
+      "title": "Author Spotlights",
+      "description": "An author page organizes author profiles and descriptions into genre sections."
+    },
+    {
+      "title": "Reader Community",
+      "description": "A community page presents sample book reviews alongside the books being discussed."
+    },
+    {
+      "title": "Contact Form",
+      "description": "Visitors can submit their name, email, and inquiry; the server saves submissions to MongoDB using Mongoose."
+    },
+    {
+      "title": "Responsive Styling",
+      "description": "Custom CSS breakpoints adapt page layouts to different screen widths, with reduced-motion support for visitors who prefer less animation."
+    }
+  ],
+  "development": {
+    "title": "Express routes. EJS pages. MongoDB-backed inquiries.",
+    "paragraphs": [
+      "Express handles page routes and sends requests to controllers, which provide data to EJS templates for rendering.",
+      "Book and author catalog content, featured titles, and community reviews are defined in controller files. The templates render this content into page sections and book or author cards.",
+      "The contact form posts to an Express route. The questions controller creates a Mongoose model instance and saves the inquiry to MongoDB."
+    ],
+    "flowTitle": "Page and inquiry flow",
+    "steps": [
+      {
+        "title": "Express route",
+        "description": "Maps a page request or contact-form submission to the appropriate controller."
+      },
+      {
+        "title": "Controller",
+        "description": "Supplies catalog or review data to a page, or processes a submitted inquiry."
+      },
+      {
+        "title": "EJS view",
+        "description": "Renders the page content and shared layout as HTML."
+      },
+      {
+        "title": "MongoDB",
+        "description": "Stores contact inquiries through the Mongoose question model."
+      }
+    ]
+  },
+  "challenges": [
+    {
+      "title": "Organizing a varied book collection",
+      "description": "Genre sections and consistent book cards give visitors a predictable and uniform way to browse a catalog containing different types of books."
+    },
+    {
+      "title": "Keeping the page experience consistent",
+      "description": "Shared layouts and view partials help maintain common navigation and promotional content across the site's pages."
+    },
+    {
+      "title": "Connecting the contact form to persistent storage",
+      "description": "The inquiry form passes submitted fields through an Express controller and Mongoose model so that inquiries can be stored in MongoDB."
+    }
+  ],
+  "future": {
+    "title": "A starting point for a fuller bookstore experience.",
+    "paragraphs": [
+      "Spellbound Books currently demonstrates server-rendered catalog and community pages, plus MongoDB-backed contact inquiries. It does not implement shopping-cart or checkout functionality.",
+      "Future work could make the catalog data-driven, add search and filters, and introduce customer-facing shopping features while preserving the existing bookstore identity."
+    ]
+  },
+  "nextSteps": [
+    "Move book and author records into a database or structured data source.",
+    "Add catalog search and filters for titles, authors, and genres.",
+    "Build book detail pages with additional information.",
+    "Implement a shopping cart and checkout flow.",
+    "Add moderation tools for community page contributions."
+  ],
+  "links": {
+    "live": "https://spellboundbooks-1q1z.vercel.app/",
+    "github": "https://github.com/lime929/SpellboundBooks"
+  }
+},
+ {
+    "theme": {
+      "accent": "#C49A46",
+      "accentHover": "#D6B45B",
+      "accentText": "#F2EBD8",
+      "onAccent": "#1E211B"
+    },
+    "image": "/images/projects/voces-del-viento.png",
+    "alt": "Voces del Viento tour page",
+    "slug": "voces-del-viento",
+    "title": "Voces del Viento",
+    "category": "Frontend Development",
+    "origin": "Course project ⟶ Portfolio piece",
+    "tagline": "A music-focused band website bringing together artist storytelling, tour updates, video, and an online merchandise experience.",
+    "projectType": "Band website & merchandise storefront",
+    "focus": "Responsive artist experience & product browsing",
+    "status": "Frontend prototype",
+    "technologies": [
+      "Next.js",
+      "React",
+      "Tailwind CSS",
+      "CSS Modules",
+      "JSON",
+      "Lucide React",
+      "React Icons"
+    ],
+    "overview": {
+      "title": "A digital home for music, stories, and fans.",
+      "paragraphs": [
+        "Voces del Viento is a concept website for a Mexican indie rock band from Michoacán. It introduces the band and its music through a multi-page experience with artist information, news, tour dates, video, fan support, and a merchandise store.",
+        "The visuals combines deep green, muted olive, warm cream, and gold with bold display typography, band photography, and performance video. Those elements carry across the home page, editorial content, tour listings, and store.",
+        "The project focuses on the frontend experience: responsive layouts, reusable interface components, local JSON content, and dynamic product detail pages."
+      ]
+    },
+    "goal": {
+      "title": "Bring the band's world together in one place.",
+      "paragraphs": [
+        "The site presents Voces del Viento as a Mexican indie rock band inspired by Michoacán's culture and the sounds of classic Latin rock and modern indie music.",
+        "Fans can explore the band's story, browse music and apparel, read updates, and find tour information from a consistent set of pages. The store and fan-focused content extend the experience beyond a promotional landing page."
+      ],
+      "main": "The goal is an expressive, easy-to-navigate band website that connects its music, identity, live shows, and merchandise."
+    },
+    "features": [
+      {
+        "title": "Responsive Band Website",
+        "description": "A shared navigation and page layout connect the home, about, news, tour, store, and support sections across screen sizes."
+      },
+      {
+        "title": "Music and Merchandise Store",
+        "description": "Separate music and apparel catalogs present product imagery and details using locally stored JSON data."
+      },
+      {
+        "title": "Dynamic Product Pages",
+        "description": "ID-based routes look up the selected product and display its image, price, description, and available product details."
+      },
+      {
+        "title": "Tour Listings and Gallery",
+        "description": "Tour data distinguishes upcoming and past performances, with a gallery for additional live-show imagery."
+      },
+      {
+        "title": "News and Artist Story",
+        "description": "Dedicated pages share band background and news content, giving the storefront context within the band's identity."
+      },
+      {
+        "title": "Performance-led Home Page",
+        "description": "A video banner, music and merchandise features, album highlights, and music-video panels introduce the project visually."
+      }
+    ],
+    "development": {
+      "title": "Local content. Reusable pages.",
+      "paragraphs": [
+        "Product catalogs, tour listings, and news posts are maintained as local JSON data rather than retrieved from a backend or content-management system.",
+        "Catalog pages render product data through shared card components. Individual apparel and music routes match the URL ID to the corresponding JSON record and render its details.",
+        "The responsive navigation uses React state for its mobile menu, while Next.js App Router organizes the site's pages and dynamic product routes."
+      ],
+      "flowTitle": "Product data flow",
+      "steps": [
+        {
+          "title": "clothing.json / music.json",
+          "description": "Store the local product records, including images, descriptions, prices, and category-specific attributes."
+        },
+        {
+          "title": "Catalog pages",
+          "description": "Read the product data and render it through reusable store components."
+        },
+        {
+          "title": "Product card",
+          "description": "Links each item to its matching detail route."
+        },
+        {
+          "title": "/store/apparel/[id] or /store/music/[id]",
+          "description": "Finds the matching record by ID and displays its product information."
+        }
+      ]
+    },
+    "challenges": [
+      {
+        "title": "Keeping the visual identity consistent",
+        "description": "A shared earthy palette, display typography, navigation, and footer help unify pages with different purposes, from tour listings to product catalogs."
+      },
+      {
+        "title": "Presenting varied content responsively",
+        "description": "The site combines text, product grids, photography, and video, so layouts need to adapt while keeping key navigation and content easy to find."
+      },
+      {
+        "title": "Defining the prototype's boundaries",
+        "description": "The store demonstrates browsing and product details, but controls such as search, filters, Add to Cart, and newsletter signup are presentation-only and are not connected to commerce or submission services."
+      }
+    ],
+    "future": {
+      "title": "Ready for real interactions.",
+      "paragraphs": [
+        "Voces del Viento is currently a frontend prototype. Catalog and detail-page content is local, and the store does not process orders or maintain a cart.",
+        "The next stage is to connect the visible controls and content to working services while preserving the responsive design and the band's visual identity."
+      ]
+    },
+    "nextSteps": [
+      "Connect catalog search and filter controls to product data.",
+      "Implement product option selection and a persistent shopping cart.",
+      "Add checkout, order handling, and product inventory through a commerce backend.",
+      "Connect the newsletter form to a subscription service.",
+      "Move news and tour content to a maintainable content source."
+    ],
+    "links": {
+      "live": null,
+      "github": "https://github.com/lime929/voices-del-viento"
+    }
+  },
+   {
+    "theme": {
+      "accent": "#468a9a",
+      "accentHover": "#541212",
+      "accentText": "#b9d8dc",
+      "onAccent": "#0f0e0e"
+    },
+    "image": "/images/projects/screamFlix.png",
+    "alt": "ScreamFlix horror movie theater banner",
+    "slug": "screamflix",
+    "title": "ScreamFlix",
+    "category": "Frontend Development",
+    "origin": "IT 339 course project ⟶ Portfolio piece",
+    "tagline": "A horror cinema discovery site for browsing cult favorites, exploring film details, and sharing reviews and recommendations.",
+    "projectType": "Horror movie discovery and community",
+    "focus": "Movie catalog, film details, and community features",
+    "status": "Frontend prototype",
+    "technologies": [
+      "Next.js",
+      "React",
+      "JavaScript",
+      "Tailwind CSS",
+      "CSS Modules",
+      "JSON",
+      "React Icons"
+    ],
+    "overview": {
+      "title": "A home for horror fans and curious newcomers.",
+      "paragraphs": [
+        "ScreamFlix is a horror movie discovery project created for IT 339 and developed as a portfolio piece. It brings a curated film catalog together with movie details, picks from selected decades, reviews, and a place for visitors to recommend films.",
+        "The interface uses a dark theater-inspired palette with deep red and teal accents, cinematic imagery, and responsive layouts. Shared navigation and movie cards connect the site's pages into a consistent browsing experience.",
+        "The project focuses on frontend routing, reusable React components, and JSON-driven movie content. Reviews and recommendations are interactive prototypes; they are held in client-side state and are not saved to a server."
+      ]
+    },
+    "goal": {
+      "title": "Make the next horror pick easier to find.",
+      "paragraphs": [
+        "The site presents horror films across subgenres, eras, and styles, giving visitors a starting point whether they are revisiting a classic or looking for something new.",
+        "Movie pages add context beyond a poster and title, while the review and recommendation forms give the experience a community-oriented feel."
+      ],
+      "main": "The goal is to make exploring horror cinema feel welcoming, visual, and easy to navigate."
+    },
+    "features": [
+      {
+        "title": "Curated Movie Catalog",
+        "description": "A responsive catalog renders film cards from local JSON data, including each movie's poster, title, year, and runtime."
+      },
+      {
+        "title": "Individual Movie Pages",
+        "description": "Selecting a film opens its ID-based route with its synopsis, genres, rating, runtime, language, country, director, and cast."
+      },
+      {
+        "title": "Picks by Decade",
+        "description": "Dedicated sections organize selected films from the 1980s, 2000s, and 2020s using their release years."
+      },
+      {
+        "title": "Movie Reviews",
+        "description": "Visitors can browse sample reviews and submit a review with a name, text, and one-to-five-star rating. New reviews are stored in page state only."
+      },
+      {
+        "title": "Movie Recommendations",
+        "description": "A form lets visitors share a movie title, their name, and a recommendation, which is added to the current page session."
+      },
+      {
+        "title": "Responsive Navigation",
+        "description": "A mobile menu provides access to the main sections and closes when a visitor selects a link."
+      }
+    ],
+    "development": {
+      "title": "Local JSON data. Reusable React views.",
+      "paragraphs": [
+        "Movie records live in horror-movies.json, including their IDs, titles, images, descriptions, release years, and other film details. Reviews are initially loaded from Reviews.json.",
+        "The catalog maps movie records into reusable cards, and each card links to a dynamic route that finds the matching record by ID. The decade page filters the same data by year.",
+        "React state drives the recommendation form, review form, and responsive navigation. Form submissions update the interface in memory; the project does not currently include a backend or persistent storage."
+      ],
+      "flowTitle": "Movie data flow",
+      "steps": [
+        {
+          "title": "horror-movies.json",
+          "description": "Stores the catalog's film details and image paths."
+        },
+        {
+          "title": "Movies page",
+          "description": "Maps the movie data into reusable movie cards."
+        },
+        {
+          "title": "Movie card",
+          "description": "Links to the selected film's ID-based detail route."
+        },
+        {
+          "title": "/movies/[id]",
+          "description": "Finds the matching JSON record and displays its details."
+        }
+      ]
+    },
+    "challenges": [
+      {
+        "title": "Creating a cohesive cinematic visual style",
+        "description": "Dark backgrounds, cinematic imagery, and red and teal accents establish a horror-inspired identity while keeping text and controls distinguishable."
+      },
+      {
+        "title": "Keeping the catalog and detail pages in sync",
+        "description": "A shared local movie dataset supplies both the catalog cards and ID-based detail routes, avoiding duplicated film content."
+      },
+      {
+        "title": "Making the interface work across screen sizes",
+        "description": "Responsive layouts and a collapsible mobile navigation adapt the browsing experience to smaller screens."
+      }
+    ],
+    "future": {
+      "title": "A frontend foundation for a larger film community.",
+      "paragraphs": [
+        "ScreamFlix is currently a frontend prototype. The movie catalog and detail pages use local data, while submitted reviews and recommendations are held only in client-side state and do not persist after the page session.",
+        "Future development can connect the community features to persistent storage and expand the tools for finding films."
+      ]
+    },
+    "nextSteps": [
+      "Add persistent storage for reviews and recommendations.",
+      "Add catalog search and filters for genres, release years, and ratings.",
+      "Expand the decade sections to include more eras from the catalog.",
+      "Improve form feedback, validation, and empty states.",
+      "Deploy the project and add its public URL."
+    ],
+    "links": {
+      "live": "",
+      "github": "https://github.com/lime929/ScreamFlix"
+    }
+  }
+]

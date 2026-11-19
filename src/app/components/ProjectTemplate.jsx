@@ -126,7 +126,7 @@ export default function ProjectTemplate({ project }) {
             Project Case Study
           </p>
 
-          <h1 className="max-w-4xl break-words text-5xl font-semibold leading-[1.05] tracking-tight text-white sm:text-7xl lg:text-8xl">
+          <h1 className="max-w-4xl break-words text-5xl font-semibold leading-[1.05] tracking-tight text-white sm:text-7xl lg:text-8xl pb-2">
             {title}
           </h1>
 
@@ -220,7 +220,7 @@ export default function ProjectTemplate({ project }) {
                   </dt>
 
                   <dd
-                    className={`mt-2 text-sm ${
+                    className={`mt-2 text-lg ${
                       detail.label === "Status"
                         ? "text-[var(--project-accent-text)]"
                         : "text-zinc-200"

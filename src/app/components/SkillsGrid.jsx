@@ -1,86 +1,65 @@
-'use client';
-import { useEffect, useRef } from "react";
-
-// pulls icons from devicon and simple icons github repos
-const DEVICON = "https://cdn.jsdelivr.net/gh/devicons/devicon/icons";
-const DEVICON_LATEST = "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons";
+// pulls icons from devicon and simple icons urls
+const DEVICON = "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/";
 const SIMPLE = "https://cdn.simpleicons.org";
 
 const skills = [
-  { name: "REACT.JS", category: "Frontend Web", icon: `${DEVICON}/react/react-original.svg` },
-  { name: "JAVASCRIPT", category: "Frontend Web", icon: `${DEVICON}/javascript/javascript-original.svg` },
-  { name: "NODE.JS", category: "Frontend Web", icon: `${SIMPLE}/` },
-  { name: "HTML5", category: "Frontend Web", icon: `${DEVICON}/html5/html5-original.svg` },
-  { name: "CSS3", category: "Frontend Web", icon: `${DEVICON}/css3/css3-original.svg` },
-  { name: "TAILWIND", category: "Frontend Web", icon: `${DEVICON_LATEST}/tailwindcss/tailwindcss-original.svg` },
-  { name: "BOOTSTRAP", category: "Frontend Web", icon: `${DEVICON}/bootstrap/bootstrap-original.svg` },
-  { name: "VITE", category: "Frontend Web", icon: `${DEVICON_LATEST}/vitejs/vitejs-original.svg` },
-  { name: "FIGMA", category: "UI/UX Design", icon: `${DEVICON}/figma/figma-original.svg` },
-  { name: "UI/UX DESIGN", category: "UI/UX Design", icon: `${SIMPLE}/adobexd/FF61F6` },
+  { name: "REACT.JS", category: "Frontend Web", icon: `${SIMPLE}/react/61DAFB` },
+  { name: "JAVASCRIPT", category: "Frontend Web", icon: `${SIMPLE}/javascript/F7DF1E` },
+  { name: "VS CODE", category: "Frontend Web", icon: `${DEVICON}/vscode/vscode-original.svg` },
+  { name: "NODE.JS", category: "Frontend Web", icon: `${SIMPLE}/nodedotjs/5FA04E` },
+  { name: "FIGMA", category: "UI/UX Design", icon: `${SIMPLE}/figma/F24E1E` },
+  { name: "HTML5", category: "Frontend Web", icon: `${SIMPLE}/html5/E34F26` },
+  { name: "CSS3", category: "Frontend Web", icon: `${SIMPLE}/css/663399` },
+  { name: "TAILWIND", category: "Frontend Web", icon: `${SIMPLE}/tailwindcss/06B6D4` },
+  { name: "BOOTSTRAP", category: "Frontend Web", icon: `${SIMPLE}/bootstrap/7952B3` },
+  { name: "VITE", category: "Frontend Web", icon: `${SIMPLE}/vite/9135FF` },
+  { name: "GITHUB", category: "Tools & Systems", icon: `${SIMPLE}/github/181717` },
   { name: "WIREFRAMING", category: "UI/UX Design", icon: `${SIMPLE}/framer/0055FF` },
-  { name: "PROTOTYPING", category: "UI/UX Design", icon: `${SIMPLE}/invision/FF3366` },
-  { name: "GIT", category: "Tools & Systems", icon: `${DEVICON}/git/git-original.svg` },
-  { name: "GITHUB", category: "Tools & Systems", icon: `${SIMPLE}/github/1a1c1c` },
-  { name: "VS CODE", category: "Tools & Systems", icon: `${DEVICON}/vscode/vscode-original.svg` }
 ];
 
-function SkillCard({ name, category, icon, index }) {
-  const ref = useRef(null);
-  // Stagger the reveal delay across each row of four: delay-100 ... delay-400
-  const delay = ((index % 4) + 1) * 100;
 
-  // Adds "reveal-visible" the first time the card scrolls into view
-  // useEffect(() => {
-  //   const el = ref.current;
-  //   if (!el) return;
-  //   const observer = new IntersectionObserver(
-  //     ([entry]) => {
-  //       if (entry.isIntersecting) {
-  //         el.classList.add("reveal-visible");
-  //         observer.disconnect();
-  //       }
-  //     },
-  //     { threshold: 0.1 }
-  //   );
-  //   observer.observe(el);
-  //   return () => observer.disconnect();
-  // }, []);
-
+function SkillCard({ name, category, icon }) {
   return (
     <div
-      ref={ref}
-      className={`bg-white border-2 sm:border-3 border-on-surface rounded-xl sm:rounded-2xl p-2.5 sm:p-3.5 flex items-center gap-2.5 sm:gap-3.5 brick-shadow hover:-translate-y-1 transition-transform group select-none min-w-0 reveal-pop delay-${delay}`}
+      className={"group flex min-w-0 select-none items-center gap-2.5 rounded-2xl border border-dark-grey/15 bg-white/70 p-2.5 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-dark-purple/60 hover:bg-white hover:shadow-lg hover:shadow-dark-grey/10 sm:gap-3.5 sm:p-3.5 reveal-pop delay-200"}
     >
-      <div className="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 rounded-lg sm:rounded-xl border-2 border-on-surface bg-[#f3f4f6] flex items-center justify-center p-2 flex-shrink-0 group-hover:bg-surface transition-colors">
+      <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl border border-dark-purple/20 bg-light-purple/30 p-2 transition-colors group-hover:bg-light-purple/50 sm:h-12 sm:w-12 sm:p-2.5 md:h-14 md:w-14">
         <img
           alt={name}
           className="w-full h-full object-contain group-hover:scale-110 transition-transform duration-300"
           loading="lazy"
           src={icon}
-          // Hide the icon if it fails to load (the original HTML did this for some icons)
-          onError={(e) => {
-            e.currentTarget.style.display = "none";
-          }}
         />
       </div>
-      <div className="flex flex-col items-start min-w-0 flex-grow">
-        <h3 className="font-button-text text-on-surface font-black text-[12px] sm:text-[14px] md:text-[15px] tracking-wide uppercase truncate w-full">
+      <div className="flex min-w-0 flex-grow flex-col items-start">
+        <h3 className="w-full truncate text-[12px] font-bold tracking-wide text-dark-grey sm:text-[14px] md:text-[15px]">
           {name}
         </h3>
-        <span className="bg-brick-yellow border border-on-surface/90 px-1.5 sm:px-2 py-0.5 rounded text-[9px] sm:text-[11px] font-bold text-on-surface font-label-caps inline-block mt-0.5 truncate max-w-full">
+        <span className="mt-1 inline-block max-w-full truncate rounded-full border border-dark-purple/20 bg-light-purple/25 px-2 py-0.5 text-[9px] font-medium text-darkest-purple sm:text-[11px]">
           {category}
         </span>
       </div>
     </div>
   );
 }
-
 export default function SkillsGrid() {
-  return (
-    <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-4 md:gap-5 mt-4">
+  return (<>
+    <h2 className="scale-y-120 px-8 pt-6 text-xl font-one tracking-widest text-dark-grey sm:text-2xl lg:mr-9 lg:text-3xl underline decoration-3">My Skills</h2>
+    <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-4 md:gap-5 mt-4 px-6 pb-6">
+      {/* iterates through all skills in the array */}
+      {/* ...skill passes all of the fields in the array into the skillCard correctly like this:
+          <SkillCard
+          key={skill.name}
+          index={i}
+          name="REACT.JS"
+          category="Frontend Web"
+          icon="..."
+          />
+      */}
       {skills.map((skill, i) => (
         <SkillCard key={skill.name} index={i} {...skill} />
       ))}
     </div>
+    </>
   );
 }

@@ -1,35 +1,23 @@
+import projects from "../../data/projects.json";
+import ProjectTemplate from "../../components/ProjectTemplate";
+
+const project = projects.find(
+  (item) => item.slug === "spellbound-books"
+);
+
+export const metadata = {
+  title: `${project.title} | Case Study`,
+  description: project.tagline,
+};
+
 export default function ProjectThreePage() {
+  const project = projects.find(
+    (item) => item.slug === "spellbound-books"
+  );
   return (
-    <main>
-      <h1>Project Three</h1>
+    <><div className="project-page">
+      <ProjectTemplate project={project} />
+    </div></>
 
-      <p>
-        A responsive website I designed and developed using React
-        and Tailwind CSS.
-      </p>
-
-      <h2>About the project</h2>
-      <p>
-        Explain what the website does, what you contributed,
-        and the challenges you solved.
-      </p>
-
-      {/* Replace these placeholder URLs with your actual links. */}
-      <a
-        href="https://voices-del-viento.vercel.app/"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        View live demo
-      </a>
-
-      <a
-        href="https://github.com/lime929/voices-del-viento"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        View source code
-      </a>
-    </main>
   );
 }
